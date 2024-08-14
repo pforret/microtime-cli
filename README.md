@@ -18,5 +18,10 @@ $ microtime
 # Get a duration in seconds
 $ microtime --diff=1723639630.583408
 53.081471
+
+# use it in a script
+STARTED_AT=$(microtime)
+(...)
+DURATION=$(microtime --diff="$STARTED_AT")
 ```
 > Inspired by [blog.forret.com/2022/12/15/bash-microtime/](https://blog.forret.com/2022/12/15/bash-microtime/)
