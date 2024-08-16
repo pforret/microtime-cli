@@ -29,14 +29,14 @@ DURATION=$(microtime --diff="$STARTED_AT")
 ```
 
 ```bat
-# use it in a Windows cmd script
+:: use it in a Windows cmd script
 set TempScript=%TEMP%\microtime.%RANDOM%.cmd
 microtime --format=cmd > %TempScript%
-# set MICROTIME=1723804285.835174
+:: set MICROTIME=1723804285.835174
 @call %TempScript%
 (...)
 microtime --diff=%MICROTIME% --format=cmd > %TempScript%
-# set ELAPSED=244.843309
+:: set ELAPSED=244.843309
 @call %TempScript%
 echo %ELAPSED%
 ```
